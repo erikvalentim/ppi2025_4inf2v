@@ -1,14 +1,15 @@
-import styles from './Header.module.css';
+import styles from "./Header.module.css";
 
-export function Header() {
-    return (
-        <header style={{ padding: '1rem', background: '#282c34', color: '#fff' }}>
-            <h1>Meu Site</h1>
-            <nav>
-                <a href="/" style={{ color: '#61dafb', marginRight: '1rem' }}>Início</a>
-                <a href="/sobre" style={{ color: '#61dafb', marginRight: '1rem' }}>Sobre</a>
-                <a href="/contato" style={{ color: '#61dafb' }}>Contato</a>
-            </nav>
-        </header>
-    );
-};
+export function Header({ cart }) {
+  return (
+    <header className={styles.header}>
+      <h1>TRJ Megastore</h1>
+      <div>
+        {cart.length > 0 && <p>{cart.length} products</p>}
+        <p>
+          Total $: {cart.reduce((total, product) => total + product.price, 0).toFixed(2)}
+        </p>
+      </div>
+    </header>
+  );
+}
