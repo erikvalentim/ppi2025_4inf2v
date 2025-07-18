@@ -9,3 +9,8 @@
   align-items: center;
 }
 
+.header a {
+  color: var(--primary);
+  text-decoration: none;
+}
+

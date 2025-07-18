@@ -17,7 +17,6 @@ export function ProductList({ addToCart }) {
       try {
         const response = await fetch(apiUrl);
         const data = await response.json();
-
         setProducts(data.products);
       } catch (error) {
         setError(error);
@@ -27,7 +26,7 @@ export function ProductList({ addToCart }) {
     }
     setTimeout(() => {
       fetchProducts();
-    }, 2000);
+    }, 100);
   }, []);
   return (
     <div className={styles.container}>
