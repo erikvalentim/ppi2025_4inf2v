@@ -16,24 +16,27 @@ export function Product({ product, addToCart }) {
       <p className={styles.productDescription}>{product.description}</p>
       <div className={styles.productQty}>
         <p className={styles.productPrice}>${product.price}</p>
-        {added && (
+        {!added && (
           <div className={styles.productQty}>
-            <button>-</button>
+            <button onClick={() => setQty(Math.max(0, qty - 1))}>-</button>
             <p>{qty}</p>
-            <button>+</button>
+            <button onClick={() => setQty(qty + 1)}>+</button>
           </div>
         )}
       </div>
-      <button
-        className={styles.productButton}
-        onClick={() => {
-          addToCart(product);
-          setAdded(true);
-          setQty(qty + 1);
-        }}
-      >
-        ADD TO CART
-      </button>
+      {!added && (
+        <button
+          className={styles.productButton}
+          onClick={() => {
+            addToCart(product);
+            setAdded(true);
+            setQty(1);
+          }}
+        >
+          ADD TO CART
+        </button>
+      )}
+      {added && <p className={styles.addedMsg}>Produto adicionado ao carrinho!</p>}
     </div>
   );
 }

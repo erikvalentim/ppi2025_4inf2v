@@ -14,3 +14,72 @@
   text-decoration: none;
 }
 
+.header {
+  background: #ffe600;
+  color: #333;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(255,230,0,0.08);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 2.6rem;
+  color: #333;
+  gap: 0.7rem;
+}
+
+.logoIcon {
+  font-size: 2.2rem;
+}
+
+.logoText {
+  font-family: "Roboto", Arial, sans-serif;
+  letter-spacing: 1px;
+}
+
+.cartInfo {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.cartBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #fff;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  color: #3483fa;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.5rem;
+  box-shadow: 0 1px 4px rgba(52,131,250,0.10);
+  transition: background 0.2s;
+}
+
+.cartBtn:hover {
+  background: #ffe600;
+  color: #333;
+}
+
+.cartCount {
+  background: #3483fa;
+  color: #fff;
+  border-radius: 50%;
+  padding: 0.2rem 0.7rem;
+  font-size: 1.3rem;
+  margin-left: 0.3rem;
+}
+
+.cartTotal {
+  font-size: 1.5rem;
+  color: #333;
+  font-weight: bold;
+}
