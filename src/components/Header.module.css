@@ -1,61 +1,45 @@
 .header {
-  background-color: var(--gray-900);
-  color: var(--primary);
-  padding: 1rem;
-  text-align: center;
-  height: 5rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.header a {
-  color: var(--primary);
-  text-decoration: none;
-}
-
-.header {
-  background: #ffe600;
+  background-color: #ffe600; /* Amarelo Mercado Livre */
   color: #333;
-  padding: 1rem 2rem;
+  padding: 1.5rem 2rem;
+  height: 5.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
   box-shadow: 0 2px 8px rgba(255,230,0,0.08);
 }
 
-.logo {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 2.6rem;
+.header a {
   color: #333;
-  gap: 0.7rem;
+  text-decoration: none;
 }
 
-.logoIcon {
-  font-size: 2.2rem;
-}
-
-.logoText {
-  font-family: "Roboto", Arial, sans-serif;
+.header h1 {
+  font-size: 2.6rem;
+  font-weight: 900;
   letter-spacing: 1px;
+  font-family: "Roboto", Arial, sans-serif;
+  margin: 0;
 }
 
-.cartInfo {
+.header div {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 2.5rem;
 }
 
-.cartBtn {
+.header .cartBtn {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.7rem;
   background: #fff;
   border-radius: 8px;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 1.2rem;
   color: #3483fa;
   text-decoration: none;
   font-weight: bold;
@@ -64,12 +48,12 @@
   transition: background 0.2s;
 }
 
-.cartBtn:hover {
+.header .cartBtn:hover {
   background: #ffe600;
   color: #333;
 }
 
-.cartCount {
+.header .cartCount {
   background: #3483fa;
   color: #fff;
   border-radius: 50%;
@@ -78,8 +62,10 @@
   margin-left: 0.3rem;
 }
 
-.cartTotal {
+.header p {
   font-size: 1.5rem;
-  color: #333;
   font-weight: bold;
+  color: #333;
+  margin: 0;
 }
+
